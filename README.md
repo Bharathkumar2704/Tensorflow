@@ -37,43 +37,57 @@ The provided code is a Convolutional Neural Network (CNN) implemented using Tens
    - Training and validation loss, as well as accuracy, are plotted over epochs.
 
 
-# Convolutional Neural Network for CIFAR-10 Classification
+### Explanation and Showcase of Differences:
 
-This repository contains a Convolutional Neural Network (CNN) implemented using TensorFlow and Keras for the CIFAR-10 dataset.
+The two provided programs are both Convolutional Neural Networks (CNNs) designed for image classification tasks, specifically using different datasets. Let's highlight the key differences between the two:
 
-## Getting Started
+#### Common Elements:
 
-### Prerequisites
+1. **Data Source:**
+   - Both programs use popular image classification datasets, namely CIFAR-10 and Fashion MNIST.
 
-- Python 3.x
-- TensorFlow
-- Matplotlib
-- NumPy
+2. **Neural Network Architecture:**
+   - The CNN architecture in both programs follows a similar structure with convolutional layers, batch normalization, max-pooling, dropout, and fully connected layers.
+
+3. **Training and Evaluation:**
+   - Both programs involve training the model over a set number of epochs with specified batch sizes and evaluate the model's performance on a test set.
+
+#### Differences:
+
+1. **Dataset:**
+   - The primary difference lies in the dataset used. The first program utilizes the CIFAR-10 dataset, which consists of 32x32 color images in 10 different classes. The second program, on the other hand, employs the Fashion MNIST dataset, consisting of 28x28 grayscale images representing fashion items.
+
+2. **Network Parameters:**
+   - The first program has three color channels for its images (RGB), whereas the second program works with grayscale images, hence has only one channel.
+
+3. **Architecture Details:**
+   - The second program uses different values for hyperparameters such as dropout rates, regularization parameters, and the number of neurons in the fully connected layers. These differences reflect the adjustments made to cater to the specific characteristics of the Fashion MNIST dataset.
+
+
+# Convolutional Neural Network for Image Classification
+
+This repository contains two Convolutional Neural Network (CNN) implementations using TensorFlow and Keras for image classification tasks on different datasets: CIFAR-10 and Fashion MNIST.
+
+## Program 1: CIFAR-10 CNN
+
+### Overview
+
+- **Dataset:** CIFAR-10
+- **Image Dimensions:** 32x32 color images (RGB)
+- **Classes:** 10 (e.g., airplane, automobile, etc.)
+
+
+### Overview
+
+- **Dataset:** Fashion MNIST
+- **Image Dimensions:** 28x28 grayscale images
+- **Classes:** 10 (e.g., T-shirt/top, Trouser, etc.)
 
 
 
-### Usage
+### Key Differences
 
-1. Run the Jupyter Notebook or Python script to train the CNN on the CIFAR-10 dataset.
-2. View model training history and performance metrics.
-
-### Model Architecture
-
-The CNN architecture consists of three convolutional layers with batch normalization, max-pooling, and dropout. Fully connected layers are added with dropout, and L2 regularization is optional.
-
-### Dataset
-
-The CIFAR-10 dataset is used for training and testing the model. It consists of 60,000 32x32 color images in 10 different classes.
-
-### Training
-
-The model is trained for 50 epochs with a batch size of 128 and 20% validation split.
-
-### Evaluation
-
-The trained model is evaluated on the test set, and accuracy and loss scores are printed.
-
-### Results
-
-Training and validation loss, as well as accuracy, are plotted over epochs.
+- **Dataset Type:** CIFAR-10 vs. Fashion MNIST
+- **Image Dimensions:** 32x32x3 (RGB) vs. 28x28x1 (Grayscale)
+- **Architecture Details:** Hyperparameters, dropout rates, and regularization differ to suit dataset characteristics.
 
