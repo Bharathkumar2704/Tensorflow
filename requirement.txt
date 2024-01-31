@@ -1,0 +1,4 @@
+# Add your project dependencies here
+tensorflow==2.7.0
+matplotlib==3.4.3
+numpy==1.21.2
