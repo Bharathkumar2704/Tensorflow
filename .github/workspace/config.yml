@@ -1,0 +1,29 @@
+project_name: Tensorflow
+author: Bharath
+version: 1.0.0
+
+dependencies:
+  - tensorflow==2.7.0
+  - matplotlib==3.4.3
+  - numpy==1.21.2
+
+dataset:
+  name: CIFAR-10
+  url: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+  description: |
+    The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes.
+
+model:
+  architecture: CNN
+  layers:
+    - Conv2D
+    - BatchNormalization
+    - MaxPooling2D
+    - Flatten
+    - Dense
+    - Dropout
+
+training:
+  epochs: 50
+  batch_size: 128
+  validation_split: 0.2
